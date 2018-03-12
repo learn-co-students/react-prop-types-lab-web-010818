@@ -1,6 +1,7 @@
 // Code Product Component Here
 import React from 'react';
 import PropTypes from 'prop-types';
+
 class Product extends React.Component{
 
   render(){
@@ -15,15 +16,21 @@ class Product extends React.Component{
     )
 }
   }
+
   Product.defaultProps = {
-    hasWaterMarks:false,
+    hasWatermark:false,
+
   }
+
+
+
+
 
   Product.propTypes = {
     name: PropTypes.string.isRequired,
     producer: PropTypes.string,
     hasWatermark: PropTypes.bool,
-    color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon'].isRequired),
+    color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
     weight: (props, propName) => {
    const weight = props[propName];
 
@@ -43,4 +50,4 @@ class Product extends React.Component{
  },
 }
 
-export default Product
+export default Product;
